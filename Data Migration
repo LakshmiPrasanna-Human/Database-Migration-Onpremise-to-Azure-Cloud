@@ -16,7 +16,11 @@ Details: You can use Azure Database Migration Service to migrate the databases f
               2. Online data transfer is suggested for large volume databases.
               3. All the limitations listed must be taken care manually. 
               
-              
+ Approach2: Replication
                   
  
 
+
+
+
+https://blog.pythian.com/five-ways-to-migrate-your-on-premises-sql-database-to-azure/
