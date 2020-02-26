@@ -2,7 +2,8 @@ Approach1: Azure Database Migration Service
 Details: You can use Azure Database Migration Service to migrate the databases from an on-premises SQL Server instance to Azure SQL Database.
           It does this in online and offline migration. 
           Offline Migration: application downtime starts when the migration starts. That means both On premise and Azure SQL servers would not be available to use.
-          Online Migration: downtime is limited to the time to cut over at the end of migration.
+          Online Migration: online option allows you to keep the on-premises database and the Azure SQL Database continuously synchronizing after you have moved the initial schema/data. 
+          This way you have ample time for the Azure SQL Database to get caught up and then decide when to cut-over and start pointing your application to the Azure SQL Database.
           Report would be generated which would show list of fixes to be done on on premise database before migration starts.
  Limitations: 1. The base version of SQL Service is SQL server 2016 onwards.
               2. Temporal tables can not be migrated, will show errors. In case if needed should exlude in migration database and tables. Workaround available.
