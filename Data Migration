@@ -12,7 +12,8 @@ Approach for Large Database Migration:
 
 1. Run Data Migration Assist with On premise data and see all issues and get it corrected. 
 2. Create Azure SQL database.
-2. Use DACPAC for genaration which also includes data for small databases and run this in Azure sQL Servers.
+2. Use BACPAC for genaration of SQL Scripts and run it in Azure sQL Database servers.
+3. Run Data Migration Assist or Data Migration service to migrate data.
 3. Configure Azure Data sync or Data Replication for syncing live data from On premise to Azure SQL server.
 4. Plan for cut off date and point applications to Azure SQL database. Need to verify Azure SQL database to be ready with latest schema
    and data.
@@ -57,14 +58,7 @@ Details: You can use Azure Database Migration Service to migrate the databases f
   
   Approach4: Data Migration Assist 
   Details: 1. Data Migration Assist will show all of the compatability isses, performance issues etc on the destination database, once its in run.
-           2. Run tool to migrate data.
-           
+           2. Run tool to migrate data.      
   
-  
-  
- 
-
-
-
 
 https://blog.pythian.com/five-ways-to-migrate-your-on-premises-sql-database-to-azure/
