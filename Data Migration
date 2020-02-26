@@ -16,8 +16,24 @@ Details: You can use Azure Database Migration Service to migrate the databases f
               2. Online data transfer is suggested for large volume databases.
               3. All the limitations listed must be taken care manually. 
               
- Approach2: Replication
+ Approach2: Trasactional Replication
+ Details: 1. If the central database is hosted on-premises or in Azure SQL VM, you can use transactional replication to distribute data.
+          Azure SQL databases can be configured as push subscribers and replicate data from the publisher, the central database. 
+          Transaction replication can only replicate data in one-way.
+          2. Can add an Azure SQL Database as a subscriber to a transactional replication. This can let migrate the data and objects
+             from your on-premises SQL Server to Azure SQL Database. We can only initiate this replication from a snapshot. 
+          3. Similar to online migration for DMS, we can start  synching well before scheduled migration and when everything is synchronized, 
+              decide when  can cut-over and re-point your applications to the azure sql database
+       
+  Limitatations: 1.  cannot restore backups.
+                  2. Can replicate tables which only have primary keys.
                   
+  Approach3: BACPAC
+  Details: BACPAC is a file which contains containing the definitions for your database schema –  tables, view, stored procedures,  
+           functions, and other database objects along with data.This single file stores the information in json format.
+           This strategy is applicable to small databases. You can create a BACPAC file and import one using SSDT, sqlpackage.exe or SSMS.
+  Limitations: Not suggested for large databases.
+  
  
 
 
