@@ -34,6 +34,9 @@ Details: You can use Azure Database Migration Service to migrate the databases f
            This strategy is applicable to small databases. You can create a BACPAC file and import one using SSDT, sqlpackage.exe or SSMS.
   Limitations: Not suggested for large databases.
   
+  Approach4: Data Migration Assist 
+  
+  
  
 
 
