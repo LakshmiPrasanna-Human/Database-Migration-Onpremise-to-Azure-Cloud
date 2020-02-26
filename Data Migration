@@ -7,6 +7,9 @@ Details: You can use Azure Database Migration Service to migrate the databases f
               2. Temporal tables can not be migrated, will show errors. In case if needed should exlude in migration database and tables. Workaround available.
               3. If any triggers are enabled in onpremises database need to to disable triggers and perform data migration. In case of online migration we should consider
                   business use cases which would fail if triggers are disabled.
+              4. Data would get truncated if size of the column is greater than 32KB.
+              5. Time stamp columns cannot be migrated, there is no work around for this other than reaching to Microsoft support team.
+              
                   
  
 
