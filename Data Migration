@@ -3,6 +3,7 @@ Details: You can use Azure Database Migration Service to migrate the databases f
           It does this in online and offline migration. 
           Offline Migration: application downtime starts when the migration starts. That means both On premise and Azure SQL servers would not be available to use.
           Online Migration: downtime is limited to the time to cut over at the end of migration.
+          Report would be generated which would show list of fixes to be done on on premise database before migration starts.
  Limitations: 1. The base version of SQL Service is SQL server 2016 onwards.
               2. Temporal tables can not be migrated, will show errors. In case if needed should exlude in migration database and tables. Workaround available.
               3. If any triggers are enabled in onpremises database need to to disable triggers and perform data migration. In case of online migration we should consider
