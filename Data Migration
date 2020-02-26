@@ -18,6 +18,11 @@ Approach for Large Database Migration:
 4. Plan for cut off date and point applications to Azure SQL database. Need to verify Azure SQL database to be ready with latest schema
    and data.
 
+Assumptions of Database Magnitude in terms of number of rows:
+Small: 10,000 or fewer records.
+Medium: 10,000 to 10000000 (1 crore or 100 lakhs) records.
+Large: 10,00,0000 (1 Crore) to 10,000,00000 records.
+Very large: 10,000,00000 or greater number of records.
    
 
 Approach1: Azure Database Migration Service
