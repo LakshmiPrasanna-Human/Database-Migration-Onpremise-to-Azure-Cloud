@@ -43,7 +43,7 @@ Details: You can use Azure Database Migration Service to migrate the databases f
               2. Online data transfer is suggested for large volume databases.
               3. All the limitations listed must be taken care manually. 
  Type: Tool which can be installed.
- Requires Azure Connectivity : No
+ Requires Azure Connectivity : yes,  This requires VPN Gateway or express route setup between on premise and Azure
               
  Approach2: Trasactional Replication
  Details: 1. If the central database is hosted on-premises or in Azure SQL VM, you can use transactional replication to distribute data.
@@ -58,12 +58,15 @@ Details: You can use Azure Database Migration Service to migrate the databases f
                   2. Can replicate tables which only have primary keys.
  Type: Its feature of Azure SQL database and SQL Server
  Requires Azure Connectivity :  VPN peering between the publisher and distributor, and/or there is VPN peering between the distributor and subscriber.
+                                 This requires VPN Gateway or express route setup between on premise and Azure.
                   
   Approach3: BACPAC
   Details: BACPAC is a file which contains containing the definitions for your database schema –  tables, view, stored procedures,  
            functions, and other database objects along with data.This single file stores the information in json format.
            This strategy is applicable to small databases. You can create a BACPAC file and import one using SSDT, sqlpackage.exe or SSMS.
   Limitations: Not suggested for large databases.
+   Type: N|A
+ Requires Azure Connectivity :  Not required, however bacpac file need to be transferred from Onpremise to Azure to run.
   
   Approach4: Data Migration Assist 
   Details: 1. Data Migration Assist will show all of the compatability isses, performance issues etc on the destination database, once its in run.
