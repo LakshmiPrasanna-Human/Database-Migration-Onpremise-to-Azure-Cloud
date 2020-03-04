@@ -70,7 +70,10 @@ Details: You can use Azure Database Migration Service to migrate the databases f
   
   Approach4: Data Migration Assist 
   Details: 1. Data Migration Assist will show all of the compatability isses, performance issues etc on the destination database, once its in run.
-           2. Run tool to migrate data.      
+           2. Run tool to migrate data.    
+           3. To run you have to be a member of the SQL Server sysadmin role
+ Type: N|A
+ Requires Azure Connectivity :  Not required, however bacpac file need to be transferred from Onpremise to Azure to run.
   
 
 https://blog.pythian.com/five-ways-to-migrate-your-on-premises-sql-database-to-azure/
