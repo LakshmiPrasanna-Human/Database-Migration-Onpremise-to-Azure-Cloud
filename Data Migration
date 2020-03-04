@@ -42,6 +42,8 @@ Details: You can use Azure Database Migration Service to migrate the databases f
               1. Offline data transfer is suggested for databases which can take down time.
               2. Online data transfer is suggested for large volume databases.
               3. All the limitations listed must be taken care manually. 
+ Type: Tool which can be installed.
+ Requires Azure Connectivity : No
               
  Approach2: Trasactional Replication
  Details: 1. If the central database is hosted on-premises or in Azure SQL VM, you can use transactional replication to distribute data.
@@ -54,6 +56,8 @@ Details: You can use Azure Database Migration Service to migrate the databases f
        
   Limitatations: 1.  cannot restore backups.
                   2. Can replicate tables which only have primary keys.
+ Type: Tool which can be installed.
+ Requires Azure Connectivity : No
                   
   Approach3: BACPAC
   Details: BACPAC is a file which contains containing the definitions for your database schema –  tables, view, stored procedures,  
